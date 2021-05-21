@@ -10,24 +10,34 @@
 
 .cursive-heading {
     font-family: 'Caveat', cursive;
-    color: #fc8d1f;
-    font-size: 40px;
+    /* font-family: 'Caveat', cursive; */
+    color: #36cee9;
+    /* font-size: 40px; */
 }
 
 .bold-heading {
-    font-family: 'Anton', sans-serif;
     color: #000000;
-    font-size: 35px;
-    font-weight: 500;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.page-paragraph {
+    font-family: 'PT Sans', sans-serif;
 }
 
 /* ---------------navbar---------- */
 
 .navbar-content {
-    justify-content: space-evenly !important;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    object-fit: contain;
 }
 
-#navbar_menu {
+.nav-item a {
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
     font-weight: bold;
 }
 
@@ -35,19 +45,13 @@
     color: #fc8d1f;
 }
 
-.nav-item a {
-    font-size: 15px;
-}
-
 #navbar_button {
-    background: #fc8d1f;
+    background: #ff7f00;
     border-radius: 20px;
     color: #f0f8ff;
     font-weight: 500;
-    width: 140px;
-    height: 30px;
-    padding: 2px;
-    margin: 5px;
+    /* width: 141px; */
+    height: 38px;
 }
 
 .bar {
@@ -102,7 +106,7 @@
 }
 
 @media(max-width:768px) {
-    #navbar_menu {
+    #navbar_menu ul {
         display: none;
     }
     #dropdown_menu_hidden {
@@ -122,11 +126,11 @@
 /* ---------------top-banner-------- */
 
 .top-banner-image {
-    background-image: url("./images/1151032.jpg");
+    background-image: url("./images/okimages/banner-img.jpg");
     background-repeat: no-repeat;
-    width: 100vw;
-    height: 450px;
-    background-position: center center;
+    /* width: 100vw; */
+    height: 665px;
+    background-position: center left;
     background-size: cover;
     background-color: #85b3f8;
     display: flex;
@@ -134,24 +138,37 @@
 }
 
 .top-banner-heading-content {
-    position: absolute;
-    top: 30%;
+    /* position: absolute; */
     z-index: 1;
 }
 
 .top-banner-heading {
+    margin-top: 212px;
+    font-size: 52px;
     display: grid;
 }
 
 .top-banner-co-heading {
-    font-family: 'Anton', sans-serif;
+    font-family: Jost;
+    font-size: 60px;
+    font-weight: 700;
     color: #ffffff;
     z-index: 1;
 }
 
+.orange-color {
+    color: #ff7f00;
+}
+
+.top-banner-buttons {
+    display: flex;
+    bottom: 229px;
+    justify-content: center;
+}
+
 .top-banner-buttons button {
-    width: 200px;
-    height: 40px;
+    width: 254px;
+    height: 57px;
     color: white;
     font-size: 16px;
     padding: 8px 20px;
@@ -169,8 +186,7 @@
 
 .button-right-top-banner {
     background-color: #37cee9;
-    margin-top: 270px;
-    margin-left: 100px;
+    margin-left: 21px;
 }
 
 @media(max-width:576px) {
@@ -187,7 +203,7 @@
         font-size: 30px;
     }
     .top-banner-heading-content {
-        top: 180px;
+        /* top: 180px; */
     }
 }
 
@@ -202,9 +218,10 @@
 
 .package-images {
     cursor: pointer;
-    width: 95%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
+padding: 10px;
 }
 
 .packages-section .row div {
@@ -228,9 +245,9 @@
 /* --------------------list banner section---------------- */
 
 .list-banner-wrap {
-    background-image: url("./images/listbackground1.jpg");
+    background-image: url("./images/okimages/service-bg.jpg");
     background-repeat: no-repeat;
-    height: 500px;
+    height: 811px;
     background-position: center center;
     background-size: cover;
     background-color: #d3dae6;
@@ -239,12 +256,12 @@
 }
 
 .list-button button {
-    left: 15%;
-    position: absolute;
-    width: 35%;
+    /* left: 15%; */
+    /* position: absolute; */
+    /* width: 35%; */
     cursor: pointer;
     border: none;
-    height: 90px;
+    height: 121px;
     font-size: 16px;
     padding: 12px 24px;
     text-align: left;
@@ -257,9 +274,7 @@
     position: relative;
 }
 
-.list-banner-container {
-    margin-left: 10%;
-}
+.list-banner-container {}
 
 .list-banner-heading {
     display: grid;
@@ -282,11 +297,11 @@
 
 .list-icon {
     float: left;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
+    height: 83px;
+    width: 83px;
+    border-radius: 100%;
     margin-right: 20px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .hotel-list {
@@ -299,6 +314,11 @@
 
 .taxi-list {
     top: 60%;
+}
+
+.service-illustration img {
+    width: 500px;
+    height: 400px;
 }
 
 .list-banner-container .hover-btn:hover {
@@ -384,13 +404,21 @@
 
 /* ----------holiday-banner section------ */
 
+#hoiday-banner-section {
+    background-image: url("./svg/skyline-blue.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+
 .holiday-section {
-    margin-top: 50px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .holiday-section p {
@@ -425,7 +453,7 @@ holiday-banner-sub-heading {
 /* ------------------world map image------------------- */
 
 .world-banner {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     position: relative;
     background-color: #37cee9;
     height: 500px;
@@ -461,7 +489,7 @@ holiday-banner-sub-heading {
 /* ------------------form section-------------------- */
 
 .form-banner {
-    background-image: url("./images/van1.jpg");
+    background-image: url("./images/okimages/form-bg.jpg");
     background-repeat: no-repeat;
     height: 600px;
     background-position: center left;
@@ -814,8 +842,8 @@ holiday-banner-sub-heading {
 
 .recent-trip-image li img {
     margin: 8px;
-    width: 100px;
-    height: 100px;
+    width: 170px;
+    height: 122px;
     margin-top: 10px;
     border-radius: 5%;
     object-fit: cover;
@@ -829,16 +857,9 @@ holiday-banner-sub-heading {
 
 .footer-background {
     background-image: url("./svg/footer-skyline.svg");
-    /* z-index: 333; */
     background-repeat: no-repeat;
-    /* height: 520px; */
-    background-position: center left;
-    background-size: cover;
-    /* background-color: #f8d985; */
-    display: flex;
-    justify-content: center;
-    /* bottom: px; */
-    /* margin-bottom: 0px; */
+    background-position: bottom;
+    background-size: contain;
 }
 
 .contact-footer {
