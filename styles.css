@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Jost:wght@700&family=PT+Sans&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap'); */
+
 /* ----whole webiste wraper---- */
 
 .wrap-container {
@@ -8,25 +11,33 @@
 
 /* -------------fonts----------------- */
 
-.cursive-heading {
+.sub-heading {
     font-family: 'Caveat', cursive;
-    /* font-family: 'Caveat', cursive; */
-    color: #36cee9;
-    /* font-size: 40px; */
+    color: #ff7f00;
+    font-weight: 700;
 }
 
-.bold-heading {
+.heading {
     color: #000000;
     font-family: 'Jost', sans-serif;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 38px;
+    font-weight: 700;
 }
 
-.page-paragraph {
+.paragraph {
     font-family: 'PT Sans', sans-serif;
 }
 
 /* ---------------navbar---------- */
+
+.nav-logo {
+    margin: 15px;
+    height: 59px;
+}
+
+.navbar-menu ul {
+    float: right;
+}
 
 .navbar-content {
     height: 90px;
@@ -39,6 +50,7 @@
     font-family: 'Jost', sans-serif;
     font-size: 14px;
     font-weight: bold;
+    float: right;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
@@ -106,7 +118,7 @@
 }
 
 @media(max-width:768px) {
-    #navbar_menu ul {
+    .navbar-menu ul {
         display: none;
     }
     #dropdown_menu_hidden {
@@ -117,11 +129,15 @@
     }
 }
 
-@media(max-width:992px) {
-    #navbar_menu {
-        font-size: 10px;
-    }
-}
+/* @media(max-width:992px) { */
+
+/* #navbar_menu { */
+
+/* font-size: 10px; */
+
+/* } */
+
+/* } */
 
 /* ---------------top-banner-------- */
 
@@ -137,14 +153,17 @@
     justify-content: center;
 }
 
-.top-banner-heading-content {
-    /* position: absolute; */
-    z-index: 1;
+.top-banner-heading {
+    font-family: 'Caveat', cursive;
+    color: #37cee9;
+    font-weight: 400;
+    /* z-index: 1; */
 }
 
 .top-banner-heading {
     margin-top: 212px;
     font-size: 52px;
+    font-weight: 400;
     display: grid;
 }
 
@@ -202,18 +221,23 @@
     .top-banner-heading {
         font-size: 30px;
     }
-    .top-banner-heading-content {
-        /* top: 180px; */
-    }
+    /* .top-banner-heading-content { */
+    /* top: 180px; */
+    /* } */
 }
 
 /* --------------------packages section--------------------------- */
 
+.packages-wrap {
+    margin: 52px;
+}
+
 .packages-heading {
+    color: #fc8d1f;
     display: grid;
-    margin-top: 50px;
-    margin-bottom: 30px;
-    font-size: 25px;
+    /* margin-top: 52px; */
+    margin-bottom: 49px;
+    font-size: 28px;
 }
 
 .package-images {
@@ -221,7 +245,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-padding: 10px;
+    padding: 15px;
 }
 
 .packages-section .row div {
@@ -231,11 +255,12 @@ padding: 10px;
 }
 
 #packages_section_bottom_button {
-    margin: 40px;
+    margin: 65px;
+    width: 254px;
+    height: 57px;
     background-color: #37cee9;
     color: white;
     font-size: 16px;
-    padding: 8px 18px;
     border: none;
     cursor: pointer;
     border-radius: 50px;
@@ -255,18 +280,25 @@ padding: 10px;
     justify-content: center;
 }
 
-.list-button button {
-    /* left: 15%; */
+.list-button div {
+    margin-top: 11px;
+    margin-bottom: 11px;
     /* position: absolute; */
-    /* width: 35%; */
-    cursor: pointer;
+    width: 95%;
+    /* cursor: pointer; */
     border: none;
     height: 121px;
     font-size: 16px;
-    padding: 12px 24px;
+    padding: 19 px;
     text-align: left;
     border-radius: 5px;
     display: inline-flex;
+    background-color: #ffffff;
+}
+
+.list-button div img {
+    margin: 19px;
+    margin-left: 30px;
 }
 
 .list-banner-wrap {
@@ -274,25 +306,31 @@ padding: 10px;
     position: relative;
 }
 
-.list-banner-container {}
-
 .list-banner-heading {
     display: grid;
-    position: absolute;
-    top: 2%;
-    left: 15%;
+    /* position: absolute; */
+    /* left: 15%; */
     font-size: 30px;
 }
 
-.list-banner-container button {
+.list-banner-container {
+    margin-top: 57px;
+}
+
+.list-button div {
     box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.43);
     -webkit-box-shadow: 2px 4px 5px 0px rgba(75, 75, 120, 0.43);
     -moz-box-shadow: 2px 4px 5px 0px rgba(75, 75, 120, 0.43);
 }
 
-.list-banner-sub-heading {
-    font-family: 'Anton', sans-serif;
-    color: #ffffff;
+.list-content-heading {
+    font-family: Jost;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.list-written-content {
+    margin: 26px;
 }
 
 .list-icon {
@@ -300,25 +338,15 @@ padding: 10px;
     height: 83px;
     width: 83px;
     border-radius: 100%;
-    margin-right: 20px;
-    object-fit: contain;
-}
-
-.hotel-list {
-    top: 20%;
-}
-
-.airline-list {
-    top: 40%;
-}
-
-.taxi-list {
-    top: 60%;
+    /* margin-right: 20px; */
+    object-fit: scale-down;
+    background-color: #e8eaed;
 }
 
 .service-illustration img {
-    width: 500px;
-    height: 400px;
+    margin-top: 117px;
+    /* width: 500px; */
+    height: 553px;
 }
 
 .list-banner-container .hover-btn:hover {
@@ -326,14 +354,15 @@ padding: 10px;
 }
 
 .service-button {
-    left: 15%;
+    /* left: 15%; */
+    bottom: 65px;
     position: absolute;
-    top: 85%;
+    /* top: 85%; */
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    width: 20%;
-    height: 40px;
+    width: 284px;
+    height: 57px;
     background-color: #37cee9;
     color: #ffffff;
     font-size: 13px;
@@ -367,13 +396,13 @@ padding: 10px;
 }
 
 .whyus-banner {
-    margin-top: 50px;
+    margin: 94px;
     text-align: center;
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: center;
-    width: 90%;
+    /* width: 90%; */
 }
 
 .whyus-banner-paragraph {
@@ -417,8 +446,8 @@ padding: 10px;
     margin-right: auto;
     display: flex;
     justify-content: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    /* padding-top: 100px; */
+    /* padding-bottom: 100px; */
 }
 
 .holiday-section p {
@@ -426,19 +455,12 @@ padding: 10px;
 }
 
 .holiday-banner-heading {
-    color: #fc8d1f;
-    font-family: 'Dancing Script', cursive;
-    text-align: center;
-    font-size: 40px;
+
 }
 
 holiday-banner-sub-heading {
-    font-family: 'Anton', sans-serif;
-    color: #000000;
-    text-align: center;
-    font-size: 50px;
-}
 
+}
 .holiday-image {
     padding: 0px 0px 0px;
 }
@@ -446,7 +468,7 @@ holiday-banner-sub-heading {
 .holiday-image-content {
     padding: 10px;
     width: 100%;
-    height: 100%;
+    height: 111px;  
     cursor: pointer;
 }
 
@@ -457,12 +479,6 @@ holiday-banner-sub-heading {
     position: relative;
     background-color: #37cee9;
     height: 500px;
-}
-
-.heading {
-    position: absolute;
-    top: 30%;
-    color: #f0f8ff;
 }
 
 .world-map-heading {
