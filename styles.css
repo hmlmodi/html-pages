@@ -26,6 +26,7 @@
 
 .paragraph {
     font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
 }
 
 /* ---------------navbar---------- */
@@ -118,26 +119,22 @@
 }
 
 @media(max-width:768px) {
-    .navbar-menu ul {
+    .navbar-menu {
         display: none;
     }
     #dropdown_menu_hidden {
         display: block;
     }
-    .navbar-content {
-        justify-content: space-between !important;
-    }
+    /* .navbar-content { */
+    /* justify-content: space-between !important; */
+    /* } */
 }
 
-/* @media(max-width:992px) { */
-
-/* #navbar_menu { */
-
-/* font-size: 10px; */
-
-/* } */
-
-/* } */
+@media(max-width:992px) {
+    .nav-link {
+        font-size: 10px !important;
+    }
+}
 
 /* ---------------top-banner-------- */
 
@@ -310,7 +307,8 @@
     display: grid;
     /* position: absolute; */
     /* left: 15%; */
-    font-size: 30px;
+    font-size: 22px;
+    font-weight: 500px;
 }
 
 .list-banner-container {
@@ -343,10 +341,17 @@
     background-color: #e8eaed;
 }
 
-.service-illustration img {
+.service-illustration {
+    background-image: url("./svg/service-illustration.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* object-fit: fill; */
     margin-top: 117px;
-    /* width: 500px; */
+    background-size: contain;
+    /* width: auto; */
     height: 553px;
+    z-index: 10;
+    /* padding: 10px; */
 }
 
 .list-banner-container .hover-btn:hover {
@@ -438,6 +443,7 @@
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
+    padding-bottom: 102px;
 }
 
 .holiday-section {
@@ -451,38 +457,39 @@
 }
 
 .holiday-section p {
-    max-width: 700px;
+    margin-bottom: 47px;
 }
 
-.holiday-banner-heading {
-
-}
-
-holiday-banner-sub-heading {
-
-}
 .holiday-image {
     padding: 0px 0px 0px;
 }
 
 .holiday-image-content {
-    padding: 10px;
+    /* margin: 13px; */
+    padding: 13px;
     width: 100%;
-    height: 111px;  
+    height: 234px;
     cursor: pointer;
 }
 
 /* ------------------world map image------------------- */
 
 .world-banner {
-    /* margin-top: 50px; */
-    position: relative;
+    /* position: relative; */
     background-color: #37cee9;
     height: 500px;
 }
 
+.world-map-background {
+    background-image: url("./images/okimages/tour-ad-img.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-top: 61px;
+}
+
 .world-map-heading {
-    margin-top: 100px;
+    margin-top: 151px;
 }
 
 .world-map-heading div {
@@ -546,11 +553,12 @@ holiday-banner-sub-heading {
 
 .form input::-webkit-input-placeholder {
     color: white;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 14px;
 }
 
 .form input {
-    margin-bottom: 30px;
+    margin-bottom: 49px;
     color: white;
     font-weight: 500;
     width: 100%;
@@ -568,7 +576,7 @@ holiday-banner-sub-heading {
     border: none;
     cursor: pointer;
     border-radius: 50px;
-    margin-top: 20px;
+    margin-top: 50px;
     width: 100%;
 }
 
@@ -578,18 +586,18 @@ holiday-banner-sub-heading {
     height: 600px;
     text-align: center;
     padding: 40px;
-    width: 65%
+    width: 100%
 }
 
 .form-stats {
     color: azure;
     display: flex;
-    /* margin-left: 100px; */
+    margin-top: 102px;
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
-    padding-left: 15%;
+    /* padding-left: 15%; */
 }
 
 .form-stats p {
@@ -598,8 +606,15 @@ holiday-banner-sub-heading {
     font-weight: bolder;
 }
 
-.form h3 {
+.form-heading {
+    font-size: 22px;
+    font-weight: 700;
     display: grid;
+}
+
+.form-heading span {
+    font-size: 38px;
+    font-weight: 700;
 }
 
 @media(max-width:992px) {
@@ -623,19 +638,31 @@ holiday-banner-sub-heading {
 
 /* -----------------news and blog section-------------- */
 
+.blog-date-place span {
+    margin-top: 25px;
+}
+
 .news-blog {
     text-align: center;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.right-blog-heading {
+    /* font-family: jost semi-bold ; */
+    /* font-family: "Jost - Semi Bold"; */
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .news-section-heading {
-    margin-top: 20px;
-    color: #fc8d1f;
-    font-family: 'Dancing Script', cursive;
-    /* text-align: center; */
+    margin-top: 92px;
     font-size: 30px;
+    display: grid;
 }
 
 .blog-paragraph {
@@ -644,8 +671,13 @@ holiday-banner-sub-heading {
     margin-bottom: 20px;
 }
 
-.news-blog-row {
-    margin-top: 20px;
+.news-blog-content {
+    margin-top: 50px;
+}
+
+.blog-left-image {
+    height: 570px;
+    object-fit: fill;
 }
 
 .bi-clock {
@@ -679,11 +711,15 @@ holiday-banner-sub-heading {
     color: #416be4;
 }
 
-.news-section-sub-heading {
-    font-family: 'Anton', sans-serif;
-    color: #000000;
-    font-size: 40px;
+.blog-right-image {
+    height: 174px;
 }
+
+/* 
+.news-section-sub-heading {
+  
+    font-size: 40px;
+} */
 
 .blog-date {
     display: flex;
@@ -705,15 +741,18 @@ holiday-banner-sub-heading {
 
 .carousal-section-heading {
     margin-top: 50px;
-    color: #fc8d1f;
-    font-family: 'Dancing Script', cursive;
-    /* text-align: center; */
     font-size: 30px;
-    text-align: center;
+    display: grid;
+}
+
+#carousel_section {
+    text-align: -webkit-center;
 }
 
 .carousal-info-paragraph {
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
+    justify-self: center;
 }
 
 .carousel-indicators {
@@ -856,6 +895,35 @@ holiday-banner-sub-heading {
 
 /* ------------------question section--------------- */
 
+.question-banner {
+    height: 158px;
+    background-color: #ddedfa;
+}
+
+.question-paragraph {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.question-banner-heading {
+    height: 160px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.question-banner-heading p {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.question-button button {
+    width: 203px;
+    height: 57px;
+}
+
+/* ------------------footer------------------------- */
+
 .recent-trip-image li img {
     margin: 8px;
     width: 170px;
@@ -985,18 +1053,6 @@ holiday-banner-sub-heading {
 
 .social-icon {
     margin-top: 20px;
-}
-
-.question-banner {
-    background-color: #ddedfa;
-}
-
-.question-banner-heading {
-    height: 160px;
-    display: flex;
-    justify-content: center;
-    /* margin-top: 20px; */
-    /* margin-bottom: 20px; */
 }
 
 .bottom-banner-button {
