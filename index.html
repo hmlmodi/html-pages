@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="styles.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
@@ -23,69 +25,67 @@
         <!-- navbar-header -->
         <section id="top-banner-section">
             <header id="header">
-                <div class="container">
-                    <div class="row">
-                        <div class="navbar-content">
-                            <nav class="navbar navbar-expand-md navbar-light">
-                                <div class="col-2">
-                                    <a href="">
-                                        <img class="img-fluid img-responsive nav-logo" src="./svg/header-logo.svg"
-                                            alt="site-logo" id="site_logo">
-                                    </a>
+                <div class="navbar-content">
+                    <div class="container">
+                        <nav class="navbar navbar-expand navbar-light">
+                            <div>
+                                <a href="#">
+                                    <img class="img-fluid img-responsive nav-logo" src="./svg/header-logo.svg"
+                                        alt="site-logo" id="site_logo">
+                                </a>
+                            </div>
+                            <div class="navbar-full">
+                                <div class="navbar-menu">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="home" href="#">HOME</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="aboutus" href="#">ABOUTUS</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="services" href="#">SERVICES</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link " id="tour" href="#">TOUR</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link " id="packages" href="#">PACKAGES</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link " id="blog" href="#">BLOG</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link " id="contact" href="#">CONTACT</a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="col-10">
-                                    <div class="navbar-menu">
-                                        <ul class="navbar-nav">
-                                            <li class="nav-item">
-                                                <a class="nav-link" id="home" href="#">HOME</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" id="aboutus" href="#">ABOUTUS</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" id="services" href="#">SERVICES</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link " id="tour" href="#">TOUR</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link " id="packages" href="#">PACKAGES</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link " id="blog" href="#">BLOG</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link " id="contact" href="#">CONTACT</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <button class="btn navbar-btn" id="navbar_button">GET INQUIRY</button>
-                                            </li>
-                                        </ul>
+                                <div class="nav-item">
+                                    <button class="btn navbar-btn" id="navbar_button">GET INQUIRY</button>
+                                </div>
+                            </div>
+                            <div class="btn-group" id="dropdown_menu_hidden">
+                                <input type="checkbox" id="open_side_bar_menu" style="display: none;">
+                                <label for="open_side_bar_menu">
+                                    <div>
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
                                     </div>
+                                </label>
+                                <div id="sidebar_menu" class="container">
+                                    <ul class="menu">
+                                        <li><a href="#">HOME</a></li>
+                                        <li><a href="#">ABOUTUS</a></li>
+                                        <li><a href="#">SERVICES</a></li>
+                                        <li><a href="#">TOUR</a></li>
+                                        <li><a href="#">PACKAGES</a></li>
+                                        <li><a href="#">BLOG</a></li>
+                                        <li><a href="#">CONTACT</a></li>
+                                    </ul>
                                 </div>
-                                <div class="btn-group" id="dropdown_menu_hidden">
-                                    <input type="checkbox" id="open_side_bar_menu" style="display: none;">
-                                    <label for="open_side_bar_menu">
-                                        <div>
-                                            <div class="bar"></div>
-                                            <div class="bar"></div>
-                                            <div class="bar"></div>
-                                        </div>
-                                    </label>
-                                    <div id="sidebar_menu">
-                                        <ul class="menu">
-                                            <li><a href="#">HOME</a></li>
-                                            <li><a href="#">ABOUTUS</a></li>
-                                            <li><a href="#">SERVICES</a></li>
-                                            <li><a href="#">TOUR</a></li>
-                                            <li><a href="#">PACKAGES</a></li>
-                                            <li><a href="#">BLOG</a></li>
-                                            <li><a href="#">CONTACT</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </nav>
-                        </div>
+                            </div>
+                        </nav>
                     </div>
                 </div>
             </header>
@@ -93,62 +93,68 @@
 
         <!-- --------------------- top-banner-section --------------------------------------------------------->
         <section id="top_banner">
-            <div class="row">
-                <div class="top-banner-image">
-                    <div class="container-fluid">
+            <div class="top-banner-image">
+                <div class="container">
+                    <div class="row">
                         <div class="text-center">
                             <p class="top-banner-heading">Best journey to Travel
                                 <span class="top-banner-co-heading"> WORLDWIDE <span class="orange-color">
                                         SINCE 1993</span>
                                 </span>
                             </p>
-
-                        </div>
-                        <div class="top-banner-buttons">
-                            <button class="button-left-top-banner">Checkout Pages</button>
-                            <button class="button-right-top-banner">About Agency</button>
+                            <div class="top-banner-buttons">
+                                <button class="button-left-top-banner">
+                                    checkout page
+                                </button>
+                                <button class="button-right-top-banner">
+                                    about agency
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
         <!-- ----------------------------packages-section------------------------------ -->
-        <section id="packages_ section" class="text-center">
-            <div class="packages-wrap">
-                <p class="packages-heading sub-heading">Best packages<span class="heading">POPULAR
-                        PACKAGES</span></p>
-                <div class="container packages-section">
-                    <div class="row">
-                        <div class="col-6  col-md-3"><img class="image-responsive package-images"
-                                src="./images/okimages/package-img-1.jpg" alt="hawa-mahal">
-                        </div>
-                        <div class="col-6  col-md-3"><img class="image-responsive package-images"
-                                src="./images/okimages/package-img-2.jpg " alt="rajasathan-monument">
-                        </div>
-                        <div class="col-6  col-md-3"><img class="image-responsive package-images"
-                                src="./images/okimages/package-img-3.jpg " alt="golden-temple">
-                        </div>
-                        <div class="col-6  col-md-3"><img class="image-responsive package-images"
-                                src="./images/okimages/package-img-4.jpg " alt="garden">
-                        </div>
-                        <div class="col-6  col-md-3"><img class="image-responsive package-images"
-                                src="./images/okimages/package-img-5.jpg" alt="monument">
-                        </div>
-                        <div class="col-6  col-md-3"><img class="image-responsive package-images"
-                                src="./images/okimages/package-img-6.jpg " alt="char-minar ">
-                        </div>
-                        <div class="col-6  col-md-3"><img class="image-responsive package-images"
-                                src="./images/okimages/package-img-7.jpg " alt="river">
-                        </div>
-                        <div class="col-6  col-md-3"><img class="image-responsive package-images"
-                                src="./images/okimages/package-img-8.jpg " alt="mountain">
+        <div class="container">
+            <section id="packages_ section" class="text-center">
+
+                <div class="packages-wrap">
+                    <p class="packages-heading sub-heading">Best packages<span class="heading">POPULAR
+                            PACKAGES</span></p>
+                    <div class="container packages-section">
+                        <div class="row">
+                            <div class="col-12  col-md-6 col-lg-3"><img class="img-fluid package-images"
+                                    src="./images/okimages/package-img-1.jpg" alt="hawa-mahal">
+                            </div>
+                            <div class="col-12  col-md-6 col-lg-3"><img class="img-fluid package-images"
+                                    src="./images/okimages/package-img-2.jpg " alt="rajasathan-monument">
+                            </div>
+                            <div class="col-12  col-md-6 col-lg-3"><img class="img-fluid package-images"
+                                    src="./images/okimages/package-img-3.jpg " alt="golden-temple">
+                            </div>
+                            <div class="col-12  col-md-6 col-lg-3"><img class="img-fluid package-images"
+                                    src="./images/okimages/package-img-4.jpg " alt="garden">
+                            </div>
+                            <div class="col-12  col-md-6 col-lg-3"><img class="img-fluid package-images"
+                                    src="./images/okimages/package-img-5.jpg" alt="monument">
+                            </div>
+                            <div class="col-12  col-md-6 col-lg-3"><img class="img-fluid package-images"
+                                    src="./images/okimages/package-img-6.jpg " alt="char-minar ">
+                            </div>
+                            <div class="col-12  col-md-6 col-lg-3"><img class="img-fluid package-images"
+                                    src="./images/okimages/package-img-7.jpg " alt="river">
+                            </div>
+                            <div class="col-12  col-md-6 col-lg-3"><img class="img-fluid package-images"
+                                    src="./images/okimages/package-img-8.jpg " alt="mountain">
+                            </div>
                         </div>
                     </div>
+                    <div class="packages-bottom-button">
+                        <button class="col-10 col-md-4" id="packages_section_bottom_button" type="button"> explore all
+                            packages</button>
+                    </div>
                 </div>
-                <div>
-                    <button id="packages_section_bottom_button" type="button"> EXPLORE ALL PACKAGES</button>
-                </div>
-            </div>
+        </div>
         </section>
         <!-- -------------------------------list banner section---------------------------------------------- -->
         <section id="list-banner">
@@ -814,7 +820,7 @@
             <div class="question-banner">
                 <div class="container">
                     <div class="row">
-                        <div class="question-banner-heading col-9">
+                        <div class="col-8 question-banner-heading">
                             <div class="heading">
                                 Have Some Questions About Tours & Travels?
                                 <p class="paragraph question-paragraph">
@@ -822,8 +828,8 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-3 question-button">
-                            <button class="bottom-banner-button" type="submit">Let's talk</button>
+                        <div class="col-4 question-button">
+                            <button class="col-8 bottom-banner-button" type="submit">Let's talk</button>
                         </div>
                     </div>
                 </div>
@@ -832,122 +838,132 @@
         <!-- ------------------footer section----------------------- -->
         <section id="footer-section">
             <footer>
-                <div class="row bg-dark text-center text-light footer-background">
+                <div class="bg-dark text-center text-light footer-background">
                     <div class="footer-content" id="contact">
-                        <div class="row contact-footer container">
-                            <div class="col-12 col-sm-12 col-md-4 col-xl-4 ">
-                                <h4 class="text-uppercase footer-heading">Our Awards
-                                    <div class="footer-dash"></div>
-                                </h4>
-                                <p class="footer-content">
-                                    A travel agency is a private retailer or public service that provides travel
-                                    and
-                                    tourism-related services to the general public on behalf of accommodation or
-                                    travel
 
-                                </p>
-                                <img class="footer-award" src="./svg/footer-award-1.svg" alt="">
+                        <div class="row contact-footer">
+                            <div class="container">
+                                <div class="col-12 col-sm-12 col-md-4">
+                                    <h4 class="text-uppercase footer-heading">Our Awards
+                                        <div class="footer-dash"></div>
+                                    </h4>
+                                    <p class="footer-content">
+                                        A travel agency is a private retailer or public service that provides travel
+                                        and
+                                        tourism-related services to the general public on behalf of accommodation or
+                                        travel
 
-                                <img class="footer-award" src="./svg/footer-award-2.svg" alt="">
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 col-xl-4 ">
-                                <h4 class="text-uppercase footer-heading">Contact Info
-                                    <div class="footer-dash"></div>
-                                </h4>
-                                <p>
-                                    you can contact us for below given information
-                                    below given information
-                                </p>
-                                <ul class="list-unstyled">
-                                    <li class="footer-telephone">
-                                        <!-- <img src="./images/telephoneicon3.png" alt=""> -->
-                                        <img src="svg/footer-phone.svg" alt="">
-                                        <p>
-                                            Need help?call toll free
-                                            <span>
-                                                0123 456 789
-                                            </span>
+                                    </p>
+                                    <img class="footer-award" src="./svg/footer-award-1.svg" alt="">
 
-                                        </p>
-                                    </li>
-                                    <li class="footer-mail">
-                                        <!-- <img src="./images/mailicon.png" alt="" height="30px" width="30px" style="color:azure"> -->
-                                        <!-- <i class="bi bi-envelope"></i> -->
-                                        <!-- <i class="bi bi-telephone-outbound"></i> -->
-                                        <img src="./svg/footer-mail.svg" alt="">
-                                        <p>
-                                            Mail us for Any Query
-                                            <span>
-                                                support@domain.com
-                                            </span>
-                                        </p>
-                                    </li>
-                                    <li class="social-icon">
-                                        <img src="./svg/footer-facebook.svg" alt="">
-                                        <img src="./svg/footer-linkedin.svg" alt="">
-                                        <img src="./svg/footer-instagram.svg" alt="">
-                                        <img src="./svg/footer-twitter.svg" alt="">
+                                    <img class="footer-award" src="./svg/footer-award-2.svg" alt="">
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4">
+                                    <h4 class="text-uppercase footer-heading">Contact Info
+                                        <div class="footer-dash"></div>
+                                    </h4>
+                                    <p>
+                                        you can contact us for below given information
+                                        below given information
+                                    </p>
+                                    <ul class="list-unstyled">
+                                        <li class="footer-telephone">
+                                            <!-- <img src="./images/telephoneicon3.png" alt=""> -->
+                                            <img src="svg/footer-phone.svg" alt="">
+                                            <p>
+                                                Need help?call toll free
+                                                <span>
+                                                    0123 456 789
+                                                </span>
 
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-xs-6 col-sm-6 col-md-4 col-xl-4">
-                                <h4 class="text-uppercase mb-0 footer-heading">Recent trips
-                                    <div class="footer-dash"></div>
-
-                                </h4>
-                                <ul class="list-unstyled ">
-                                    <div class="recent-trip-image">
-                                        <li>
-                                            <img src="./images/okimages/footer-gallery-img-1.jpg" alt=" ">
-                                            <img src="./images/okimages/footer-gallery-img-2.jpg" alt=" "><br>
-                                            <img src="./images/okimages/footer-gallery-img-3.jpg" alt=" ">
-                                            <img src="./images/okimages/footer-gallery-img-4.jpg" alt=" ">
+                                            </p>
                                         </li>
+                                        <li class="footer-mail">
+                                            <!-- <img src="./images/mailicon.png" alt="" height="30px" width="30px" style="color:azure"> -->
+                                            <!-- <i class="bi bi-envelope"></i> -->
+                                            <!-- <i class="bi bi-telephone-outbound"></i> -->
+                                            <img src="./svg/footer-mail.svg" alt="">
+                                            <p>
+                                                Mail us for Any Query
+                                                <span>
+                                                    support@domain.com
+                                                </span>
+                                            </p>
+                                        </li>
+                                        <li class="social-icon">
+                                            <img src="./svg/footer-facebook.svg" alt="">
+                                            <img src="./svg/footer-linkedin.svg" alt="">
+                                            <img src="./svg/footer-instagram.svg" alt="">
+                                            <img src="./svg/footer-twitter.svg" alt="">
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-4">
+                                    <h4 class="text-uppercase mb-0 footer-heading">Recent trips
+                                        <div class="footer-dash"></div>
+                                    </h4>
+                                    <div class="row recent-trips">
+                                        <div class="col-6">
+                                            <img class="img-fluid" src="./images/okimages/footer-gallery-img-1.jpg"
+                                                alt=" ">
+                                            <img class="img-fluid" src="./images/okimages/footer-gallery-img-2.jpg"
+                                                alt=" ">
+                                        </div>
+                                        <div class="col-6">
+                                            <img class="img-fluid" src="./images/okimages/footer-gallery-img-3.jpg"
+                                                alt=" ">
+                                            <img class="img-fluid" src="./images/okimages/footer-gallery-img-4.jpg"
+                                                alt=" ">
+                                        </div>
                                     </div>
-                                </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="text-center p-3 ">
-                    </div>
-                    <hr>
-                    <!-- -------------------------------------- -->
-                    <nav class="navbar navbar-expand-md navbar-light">
-                        <div class="container-fluid xyz">
-                            <div id="footer-navbar">
-                                <ul class="navbar-nav">
-                                    <!-- <div class=""> -->
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="home" href="#">HOME</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="aboutus" href="#">ABOUTUS</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="services" href="#">SERVICES</a>
-                                    </li>
-                                    <!-- </div> -->
-                                    <!-- <div class=""> -->
-                                    <li class="nav-item">
-                                        <a class="nav-link " id="tour" href="#">TOUR</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link " id="packages" href="#">PACKAGES</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link " id="blog" href="#">BLOG</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link " id="contact" href="#">CONTACT</a>
-                                    </li>
-                                    <!-- </div> -->
-                                </ul>
-                            </div>
-                        </div>
                 </div>
-            </footer>
-        </section>
+                <!-- <hr> -->
+                <!-- -------------------------------------- -->
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <div class="row">
+                        <div class="container">
+                            <div class="xyz">
+
+                                <div id="footer-navbar">
+                                    <ul class="navbar-nav">
+                                        <!-- <div class=""> -->
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="home" href="#">HOME</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="aboutus" href="#">ABOUTUS</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="services" href="#">SERVICES</a>
+                                        </li>
+                                        <!-- </div> -->
+                                        <!-- <div class=""> -->
+                                        <li class="nav-item">
+                                            <a class="nav-link " id="tour" href="#">TOUR</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link " id="packages" href="#">PACKAGES</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link " id="blog" href="#">BLOG</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link " id="contact" href="#">CONTACT</a>
+                                        </li>
+                                        <!-- </div> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    </div>
+    </footer>
+    </section>
     </div>
 </body>
 
