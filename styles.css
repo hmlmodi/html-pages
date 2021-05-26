@@ -25,9 +25,6 @@
     font-family: 'Jost', sans-serif;
     font-size: 38px;
     font-weight: 700;
-
-
-    
 }
 
 .paragraph {
@@ -311,7 +308,7 @@ packages-bottom-button {
 .list-banner-wrap {
     background-image: url("./images/okimages/service-bg.jpg");
     background-repeat: no-repeat;
-    height: 811px;
+    height: max-content;
     background-position: center center;
     background-size: cover;
     background-color: #d3dae6;
@@ -326,7 +323,7 @@ packages-bottom-button {
     width: 95%;
     /* cursor: pointer; */
     border: none;
-    height: 121px;
+    /* height: 121px; */
     font-size: 16px;
     padding: 19 px;
     text-align: left;
@@ -347,6 +344,7 @@ packages-bottom-button {
 
 .list-banner-heading {
     display: grid;
+    margin-top: 57px;
     /* position: absolute; */
     /* left: 15%; */
     font-size: 22px;
@@ -354,7 +352,7 @@ packages-bottom-button {
 }
 
 .list-banner-container {
-    margin-top: 57px;
+    margin-top: 47px;
 }
 
 .list-button div {
@@ -383,16 +381,21 @@ packages-bottom-button {
     background-color: #e8eaed;
 }
 
-.service-illustration {
+.service-illustration img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-position: top top;
+    /* position: top; */
+    /* margin-top: 117px; */
+    /* 
     background-image: url("./svg/service-illustration.svg");
     background-repeat: no-repeat;
-    background-position: center center;
     /* object-fit: fill; */
-    margin-top: 117px;
-    background-size: contain;
+    /* background-size: contain; */
     /* width: auto; */
-    height: 553px;
-    z-index: 10;
+    /* height: 553px; */
+    /* z-index: 10; */
     /* padding: 10px; */
 }
 
@@ -402,8 +405,9 @@ packages-bottom-button {
 
 .service-button {
     /* left: 15%; */
+    margin: 70px 0px;
     bottom: 65px;
-    position: absolute;
+    /* position: absolute; */
     /* top: 85%; */
     border: none;
     cursor: pointer;
@@ -422,6 +426,10 @@ packages-bottom-button {
 @media (max-width: 768px) {
     .list-banner-heading {
         font-size: 25px;
+        text-align: center;
+    }
+    .list-paragraph {
+        text-align: center;
     }
     .service-button {
         font-size: 9px;
@@ -433,6 +441,9 @@ packages-bottom-button {
         width: 70%;
         padding: 6px 10px;
     }
+    /* .list-banner-wrap { */
+    /* height: ; */
+    /* } */
 }
 
 /* --------------whyus banner section-------------- */
@@ -512,6 +523,7 @@ packages-bottom-button {
     width: 100%;
     height: 234px;
     cursor: pointer;
+    object-fit: cover;
 }
 
 /* ------------------world map image------------------- */
@@ -519,19 +531,24 @@ packages-bottom-button {
 .world-banner {
     /* position: relative; */
     background-color: #37cee9;
-    height: 500px;
+    height: max-content;
 }
 
-.world-map-background {
-    background-image: url("./images/okimages/tour-ad-img.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    margin-top: 61px;
+.world-map-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* background-image: url("./images/okimages/tour-ad-img.jpg"); */
+    /* background-repeat: no-repeat; */
+    /* background-position: center center; */
+    /* background-size: contain; */
+    /* margin-top: 61px; */
 }
 
 .world-map-heading {
     margin-top: 151px;
+    margin-bottom: 175px;
+    object-fit: contain;
 }
 
 .world-map-heading div {
@@ -549,7 +566,16 @@ packages-bottom-button {
     color: #f0f8ff;
 }
 
-@media(max-width:568px) {}
+@media(max-width:568px) {
+    .world-map-background img {
+        margin-top: 41px;
+    }
+    .world-map-heading {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+}
 
 /* ------------------form section-------------------- */
 
@@ -697,6 +723,7 @@ packages-bottom-button {
     /* font-family: jost semi-bold ; */
     /* font-family: "Jost - Semi Bold"; */
     margin-top: 10px;
+    margin-bottom: 0px;
     font-size: 20px;
     font-weight: 400;
 }
@@ -708,9 +735,11 @@ packages-bottom-button {
 }
 
 .blog-paragraph {
+    margin-top: 14px;
     text-align: left;
     font-family: 'Fjalla One', sans-serif;
     margin-bottom: 20px;
+    display: grid;
 }
 
 .news-blog-content {
@@ -718,8 +747,8 @@ packages-bottom-button {
 }
 
 .blog-left-image {
-    height: 570px;
-    object-fit: fill;
+    height: 392px;
+    /* object-fit: fill; */
 }
 
 .bi-clock {
@@ -729,7 +758,7 @@ packages-bottom-button {
 
 .blog-author-photo-name {
     text-align: left;
-    margin-bottom: 30px;
+    margin: 30px 0px;
     bottom: 0px;
     font-size: 12px;
 }
@@ -747,6 +776,14 @@ packages-bottom-button {
     text-align: left;
 }
 
+.blog {
+    display: grid;
+}
+
+.blog-img {
+    float: left;
+}
+
 .label-icon {
     margin-left: 20px;
     font-weight: bold;
@@ -754,7 +791,7 @@ packages-bottom-button {
 }
 
 .blog-right-image {
-    height: 174px;
+    height: max-content;
 }
 
 /* 
@@ -763,12 +800,20 @@ packages-bottom-button {
     font-size: 40px;
 } */
 
+.news-left-blog {
+    display: grid;
+}
+
 .blog-date {
     display: flex;
 }
 
+.blog-date p {
+    margin-bottom: 0px;
+}
+
 .blog-date-place {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     font-size: 12px;
     display: flex;
     justify-content: flex-start;
@@ -777,6 +822,12 @@ packages-bottom-button {
 .left-blog-heading {
     font-family: 'Anton', sans-serif;
     color: #000000ec;
+}
+
+@media(max-width:568px) {
+    .review-col-right {
+        display: none;
+    }
 }
 
 /* ------------------carousal-section--------- */
