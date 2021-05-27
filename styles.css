@@ -3,13 +3,13 @@
 
 /* ----whole webiste wraper---- */
 
-.wrap-container {
+/* .wrap-container { */
     /* margin: 20px; */
     /* margin-left: 5px; */
     /* margin-right: x; */
     /* padding-right: 10px; */
     /* padding-left: 10px; */
-}
+/* } */
 
 /* -------------fonts----------------- */
 
@@ -108,9 +108,10 @@
     margin-left: 50px;
     height: 512px;
     background: #37cee9;
-    transform: translateX(-992px);
+    transform: translateX(-1220px);
     z-index: 2;
     transition: transform .3s;
+    /* width: 100%; */
 }
 
 #open_side_bar_menu:checked~#sidebar_menu {
@@ -149,6 +150,12 @@
     }
     #dropdown_menu_hidden {
         display: block;
+    }
+    #navbar_button {
+        width: 89px;
+        margin: 0px 25px;
+        font-size: 10px;
+        padding: 0px;
     }
 }
 
@@ -258,7 +265,7 @@
 /* --------------------packages section--------------------------- */
 
 .packages-wrap {
-    margin: 52px;
+    margin: 52px 0px;
 }
 
 .packages-heading {
@@ -454,22 +461,13 @@ packages-bottom-button {
 }
 
 .whyus-banner {
-    margin: 94px;
+    margin: 94px 0px;
     text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    /* width: 90%; */
 }
 
 .whyus-banner-paragraph {
     display: flex;
     justify-content: center;
-}
-
-.whyus-banner-paragraph p {
-    max-width: 700px;
 }
 
 .whyus-banner-heading {
@@ -582,7 +580,7 @@ packages-bottom-button {
 .form-banner {
     background-image: url("./images/okimages/form-bg.jpg");
     background-repeat: no-repeat;
-    height: 600px;
+    height: max-content;
     background-position: center left;
     background-size: cover;
     background-color: #f8d985;
@@ -644,7 +642,7 @@ packages-bottom-button {
     border: none;
     cursor: pointer;
     border-radius: 50px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     width: 100%;
 }
 
@@ -686,22 +684,22 @@ packages-bottom-button {
 }
 
 @media(max-width:992px) {
-    .form {
-        width: 100%;
-    }
-    .form-stats {
-        padding-left: 2%;
-    }
+    /* .form-stats { */
+    /* padding-left: 2%; */
+    /* } */
 }
 
 @media(max-width:768px) {
-    .form-banner div {
-        padding-right: 0px;
-        padding-left: 0px;
+    .form {
+        margin: 50px 0px;
     }
-    .form-stats {
-        display: none;
-    }
+    /* .form-banner div { */
+    /* padding-right: 0px; */
+    /* padding-left: 0px; */
+    /* } */
+    /* .form-stats { */
+    /* display: none; */
+    /* } */
 }
 
 /* -----------------news and blog section-------------- */
@@ -1003,7 +1001,7 @@ packages-bottom-button {
 }
 
 .question-banner-heading {
-    height: 160px;
+    /* height: 160px; */
     font-size: 30px;
     display: flex;
     justify-content: flex-start;
@@ -1016,7 +1014,7 @@ packages-bottom-button {
 }
 
 .question-banner-heading p {
-    font-size: 30px;
+    font-size: 16px;
     font-weight: 400;
 }
 
@@ -1024,10 +1022,15 @@ packages-bottom-button {
     display: flex;
     justify-content: flex-end;
 }
-
+.question-banner-content{
+    margin: 50px 0px;
+    display: flex;
+    /* justify-content: flex-start; */
+    /* align-items: center; */ 
+}
 .bottom-banner-button {
     height: 57px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     background-color: #fc8d1f;
     color: #000000;
     font-size: 16px;
