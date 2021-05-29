@@ -46,12 +46,18 @@
     font-weight: 400;
 }
 
-banner-button {
+.banner-button {
     font-family: 'Jost', Semi Bold;
     font-size: 16px;
-    color: #ffffff;
-    padding: 22px 0px;
     font-weight: 400;
+    color: #ffffff;
+    padding: 20px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    height: 57px;
 }
 
 @media(max-width:576px) {
@@ -64,6 +70,11 @@ banner-button {
     .paragraph {
         font-size: 14px;
     }
+    .banner-button {
+        font-size: 14px;
+        padding: 16px 20px;
+        height: 46px;
+    }
 }
 
 /* ---------------navbar---------- */
@@ -73,7 +84,7 @@ banner-button {
     height: 59px;
 }
 
-.navbar-menu ul {
+.navbar-menu {
     float: right;
     margin-left: 20px;
 }
@@ -97,7 +108,7 @@ banner-button {
     font-family: 'Jost', Semi Bold;
     font-size: 14px;
     font-weight: 400;
-    height: 12px;
+    /* height: 12px; */
     /* float: right; */
 }
 
@@ -115,8 +126,8 @@ banner-button {
     font-family: 'Jost', Semi Bold;
     font-size: 14px;
     font-weight: 400;
-    background: #ff7f00;
     border-radius: 20px;
+    background: #ff7f00;
     color: #f0f8ff;
     width: 141px;
     height: 38px;
@@ -166,7 +177,7 @@ banner-button {
 
 #open_side_bar_menu:checked~#sidebar_menu {
     transform: translateY(2vw);
-    width: 90vw;
+    width: 93vw;
     transition: transform .0s;
     display: block;
 }
@@ -187,7 +198,7 @@ banner-button {
 .whole-bar {
     border: 2px solid #303030;
     border-radius: 100%;
-    padding: 3px;
+    padding: 4px;
     cursor: pointer;
 }
 
@@ -200,10 +211,6 @@ banner-button {
 
 .menu {
     list-style: none;
-}
-
-.menu li {
-    color: #f0f8ff;
 }
 
 .menu li a {
@@ -292,33 +299,24 @@ banner-button {
 
 .top-banner-buttons {
     display: flex;
-    bottom: 229px;
+    /* bottom: 229px; */
     justify-content: center;
 }
 
 .top-banner-buttons button {
     width: 254px;
-    height: 57px;
-    color: white;
-    font-family: 'Jost', Semi Bold;
-    font-weight: 400;
-    font-size: 16px;
-    padding: 15px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 50px;
-    text-align: center;
-    text-transform: uppercase;
+    /* height: 57px; */
     z-index: 1;
 }
 
 .button-left-top-banner {
+    float: right;
     background-color: #fc8d1f;
 }
 
 .button-right-top-banner {
     background-color: #37cee9;
-    margin-left: 21px;
+    float: left;
 }
 
 @media(max-width:576px) {
@@ -335,16 +333,8 @@ banner-button {
     .top-banner-buttons button {
         width: 236px;
         height: 50px;
-        display: grid;
-        /* font-size: 10px; */
-        /* padding: 6px 8px; */
-    }
-    .top-banner-buttons {
-        display: grid;
-    }
-    .button-right-top-banner {
-        margin-top: 30px;
-        margin-left: 0px;
+        float: none;
+        margin: 15px 0px;
     }
 }
 
@@ -408,20 +398,10 @@ banner-button {
 }
 
 .packages-bottom-button button {
-    /* margin: 65px; */
     margin-top: 65px;
     margin-bottom: 65px;
-    /* margin-right: 43px; */
-    /* margin-left: 43px; */
-    /* width: 22vw; */
-    height: 57px;
+    /* height: 57px; */
     background-color: #37cee9;
-    color: white;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 50px;
-    font-weight: 500;
     text-transform: uppercase;
 }
 
@@ -547,50 +527,29 @@ banner-button {
 }
 
 .service-button {
-    /* left: 15%; */
     margin-top: 13px;
     margin-bottom: 65px;
-    /* bottom: 65px; */
-    /* position: absolute; */
-    /* top: 85%; */
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
     width: 284px;
-    height: 57px;
+    /* height: 57px; */
     background-color: #37cee9;
-    color: #ffffff;
-    font-size: 13px;
-    padding: 4px 2px;
-    cursor: pointer;
-    border-radius: 50px;
-    font-weight: 500;
 }
 
 @media (max-width: 768px) {
     .list-banner-heading {
-        /* font-size: 25px; */
         text-align: center;
     }
     .list-paragraph {
         text-align: center;
     }
     .service-button {
-        /* font-size: 9px; */
-        padding: 4px 2px;
-        height: 40px;
+        height: 45px;
         margin-right: auto;
         margin-left: auto;
-        /* width: 35%; */
     }
     .list-banner-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    .list-button button {
-        width: 70%;
-        padding: 6px 10px;
     }
     /* .list-banner-wrap { */
     /* height: ; */
@@ -856,13 +815,6 @@ banner-button {
 #form-bottom-button {
     background-color: #f0f8ff;
     color: black;
-    font-size: 16px;
-    font-weight: 700;
-    padding: 10px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 50px;
-    /* margin-top: 50px; */
     width: 100%;
 }
 
@@ -1304,17 +1256,9 @@ banner-button {
 }
 
 .bottom-banner-button {
-    height: 57px;
-    /* margin-top: 20px; */
+    /* height: 57px; */
     background-color: #fc8d1f;
-    color: #000000;
-    font-size: 16px;
-    padding: 10px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 50px;
     width: 100%;
-    /* width: auto; */
 }
 
 @media(max-width:576px) {
