@@ -33,7 +33,7 @@
     font-size: 16px;
     font-weight: 400;
     color: #ffffff;
-    padding: 20px 20px;
+    /* padding: 20px 20px; */
     border: none;
     cursor: pointer;
     border-radius: 50px;
@@ -54,7 +54,7 @@
     }
     .banner-button {
         font-size: 14px;
-        padding: 16px 20px;
+        /* padding: 16px 20px; */
         height: 46px;
     }
 }
@@ -69,8 +69,11 @@
 .navbar-menu {
     float: right;
     margin-left: 20px;
+    margin-right: 40px;
 }
-
+/* .navbar-menu ul{ */
+/* } */
+    
 .nav-item button {
     float: right;
 }
@@ -260,7 +263,10 @@
     color: #ffffff;
     z-index: 1;
 }
-
+.top-banner-content{
+    display: flex;
+    justify-content: center;
+}
 .orange-color {
     color: #fc8d1f;
 }
@@ -307,21 +313,24 @@
 /* --------------------packages section--------------------------- */
 
 .packages-wrap {
-    margin-top: 52px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .packages-heading {
     display: grid;
-    margin-bottom: 49px;
+    /* margin-bottom: 49px; */
 }
 
 .package-images img {
     cursor: pointer;
     width: 100%;
     object-fit: cover !important;
-    padding: 0px;
-    margin: 15px 0px;
-}
+    padding: 0px 0px;
+    margin: 15px;
+  }
 
 .package-images {
     position: relative;
@@ -331,7 +340,7 @@
     padding: 5px 0px;
     position: absolute;
     bottom: 50px;
-    float: left;
+    float: left !important;
     height: max-content;
     width: 70%;
     font-size: 24px;
@@ -339,14 +348,24 @@
     background-color: #ff7f00;
     color: #f0f8ff;
 }
+.packages-sub-description{
+    background-color: #303030;
+    opacity: 0.7;
+    position: absolute;
+    bottom: 20px;
+    color: #f0f8ff;
+    font-size: 12px;
+    font-size-adjust: inherit;
 
+
+}
 .packages-bottom-button {
     display: contents;
 }
 
 .packages-bottom-button button {
-    margin-top: 65px;
-    margin-bottom: 65px;
+    margin-top: 60px;
+    margin-bottom: 60px;
     background-color: #37cee9;
     text-transform: uppercase;
 }
@@ -365,6 +384,10 @@
         margin-top: 40px;
         margin-bottom: 60px;
     }
+    .packages-sub-description{
+        font-size: 10px;
+    }
+
 }
 
 /* --------------------list banner section---------------- */
@@ -482,7 +505,7 @@
 }
 
 .whyus-banner {
-    margin: 94px 0px;
+    margin: 60px 0px;
     text-align: center;
 }
 
@@ -524,6 +547,8 @@
     margin-right: auto;
     display: flex;
     justify-content: center;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .holiday-section p {
@@ -650,7 +675,9 @@
     margin-bottom: 20px;
     border-right: 2px solid transparent rgb(240, 248, 255);
 }
-
+.stats-right{
+    margin-left: 40px;
+}
 .form-readings div {
     font-weight: 500;
 }
@@ -751,7 +778,7 @@
 /* -----------------news and blog section-------------- */
 
 .blog-date-place span {
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .news-blog {
@@ -762,14 +789,9 @@
     justify-content: center;
 }
 
-.right-blog-heading {
-    margin-top: 10px;
-    font-size: 20px;
-    font-weight: 400;
-}
 
 .news-section-heading {
-    margin-top: 92px;
+    margin-top: 60px;
     font-size: 30px;
     display: grid;
 }
@@ -782,9 +804,6 @@
     display: grid;
 }
 
-.blog-paragraph p {
-    margin-top: 14px;
-}
 
 .news-blog-content {
     margin-top: 50px;
@@ -792,6 +811,7 @@
 
 .blog-left-image {
     width: 100%;
+    height: 100%;
 }
 
 .bi-clock {
@@ -819,6 +839,9 @@
     font-size: 18px;
     color: #303030;
     text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top:10px;
 }
 
 .blog {
@@ -828,6 +851,7 @@
 .blog-img {
     float: left;
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -884,7 +908,7 @@
 /* ------------------carousal-section--------- */
 
 .carousal-section-heading {
-    margin-top: 50px;
+    margin-top: 26px;
     display: grid;
 }
 
@@ -1052,7 +1076,8 @@
 /* ------------------question section--------------- */
 
 .question-banner {
-    background-color: #ddedfa;
+    margin-top: 60px;
+    background-color: #f4f7fb;
 }
 
 .question-paragraph {
@@ -1139,12 +1164,9 @@
     margin-top: 50px;
 }
 
+
 .contact-footer div p {
     font-size: 12px;
-}
-
-.contact-footer div {
-    margin-bottom: 20px;
 }
 
 .social-icon img {
@@ -1249,6 +1271,7 @@
 .recent-trips div img {
     margin-bottom: 28px;
     border-radius: 10px;
+    /* width: 100%; */
 }
 
 .footer-navbar {
