@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
-
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"></script>
@@ -23,75 +23,96 @@
     <!-- start -->
     <div id="banner" class="wrap-container">
         <!-- navbar-header -->
-        <section id="top-banner-section">
-            <header id="header">
-                <div class="navbar-content">
-                    <div class="container">
-                        <nav class="navbar navbar-expand navbar-light">
-                            <!-- <div> -->
-                            <a href="#">
-                                <img class="img-fluid img-responsive nav-logo" src="./svg/header-logo.svg"
-                                    alt="site-logo" id="site_logo">
-                            </a>
-                            <!-- </div> -->
-                            <div class="navbar-full">
-                                <div class="navbar-menu">
-                                    <ul class="navbar-nav">
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="home" href="#">HOME</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="aboutus" href="#">ABOUTUS</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="services" href="#">SERVICES</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link " id="tour" href="#">TOUR</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link " id="packages" href="#">PACKAGES</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link " id="blog" href="#">BLOG</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link " id="contact" href="#">CONTACT</a>
-                                        </li>
+
+        <header id="header">
+            <div class="container">
+                <div class="header-wrap">	
+                    <div class="row">
+                        <div class="col-6 col-lg-3">
+                            <div class="logo-wrap">
+                                <img src="./svg/header-logo.svg" class="logo white">
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-9 no-relative navbar-content">
+                            <div class="header-menu-wrap">
+                                <a href="#contact" class="get-quote pull-left">Get a Quote</a>
+                                <a href="javascript:void(0)" class="mobile-menu-toggler d-lg-none">
+                                    <img src="./svg/menu-icon-open.svg" class="menu-icon-open">
+                                    <img src="./svg/menu-icon-close.svg" class="menu-icon-close">
+                                </a>
+                                <div class="header-menu">
+                                    <div class="triangle d-lg-none"><div></div></div>
+                                    <ul class="navbar-menu">
+                                        <li class="item"><a href="#" class="link">HOME</a></li>
+                                        <li class="item"><a href="#about" class="link">ABOUT US</a></li>
+                                        <li class="item"><a href="#services" class="link">SERVICES</a></li>
+                                        <li class="item"><a href="#solutions" class="link">SOLUTIONS</a></li>
+                                        <li class="item"><a href="#contact" class="link">CONTACT US</a></li>
                                     </ul>
                                 </div>
-                                <div class="nav-item">
-                                    <button class="btn navbar-btn" id="navbar_button">GET INQUIRY</button>
-                                </div>
+                                <div class="clearfix"></div>
                             </div>
-                            <div class="btn-group" id="dropdown_menu_hidden">
-                                <input type="checkbox" id="open_side_bar_menu" style="display: none;">
-                                <label for="open_side_bar_menu">
-                                    <div class="whole-bar">
-                                        <div class="bar-1"></div>
-                                        <div class="bar-2"></div>
-                                        <div class="bar-3"></div>
-                                    </div>
-                                </label>
-                                <div id="sidebar_menu" class="container col-12">
-                                    <ul class="menu">
-                                        <li><a href="#">HOME</a></li>
-                                        <li><a href="#">ABOUTUS</a></li>
-                                        <li><a href="#">SERVICES</a></li>
-                                        <li><a href="#">TOUR</a></li>
-                                        <li><a href="#">PACKAGES</a></li>
-                                        <li><a href="#">BLOG</a></li>
-                                        <li><a href="#">CONTACT</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
+                        </div>
                     </div>
                 </div>
-            </header>
-        </section>
-
-
+            </div>
+        </header>
+        
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                //toggle mobile menu
+                jQuery(".mobile-menu-toggler").click(function(){
+                    jQuery(".menu-icon-open, .menu-icon-close").toggle();
+                    jQuery(".header-menu").slideToggle();
+                });
+        
+                jQuery("#header .header-menu .link").click(function(){
+                    //slide up menu in mobile when link is clicked
+                    if(jQuery(document).width() < 992){
+                        jQuery(".menu-icon-open, .menu-icon-close").toggle();
+                        jQuery(".header-menu").slideUp();
+                    }
+        
+                    //smooth scroll
+                    smoothScroll(jQuery(this));
+                });
+        
+                jQuery("#header .get-quote").click(function(){
+                    smoothScroll(jQuery(this));
+                });
+        
+                //smooth scroll
+                function smoothScroll(_this){
+                    jQuery('html, body').stop().animate({
+                        scrollTop: _this.attr('href') == '#' ? 0 : jQuery(_this.attr('href')).offset().top + 1
+                    }, 1000, 'easeOutExpo');
+                    return false;
+                }
+            });
+        
+            //scrolled header menu
+            jQuery(window).scroll(function(){
+                //add class 'scrolled' to header
+                if(jQuery(this).scrollTop() > 50){
+                    jQuery("#header").addClass("scrolled");
+                }
+                else{
+                    jQuery("#header").removeClass("scrolled");
+                }
+        
+                //active menu item on scroll
+                jQuery(".section").each(function(){
+                    var windowTop = jQuery(window).scrollTop();
+                    if(jQuery(this).position().top <= windowTop){
+                        jQuery("#header .header-menu .link").removeClass("active");
+                        if(jQuery("#header .header-menu .link[href='#" + jQuery(this).attr("id") + "']").length)	
+                            jQuery("#header .header-menu .link[href='#" + jQuery(this).attr("id") + "']").addClass("active");
+                        else
+                            jQuery("#header .header-menu .link[href='#']").addClass("active");
+                    }
+                });
+            });
+        </script>
         <!-- --------------------- top-banner-section --------------------------------------------------------->
         <section id="top_banner" class="top-banner-image">
             <div class="container">
@@ -343,8 +364,8 @@
                 <div class="row">
                     <div class="col-12 col-md-6 holiday-portion">
                         <div class="holiday-image-content">
-                            <img class="image-responsive holiday-photo"
-                                src="./images/okimages/tour-hm-img-1.jpg" alt="london">
+                            <img class="image-responsive holiday-photo" src="./images/okimages/tour-hm-img-1.jpg"
+                                alt="london">
                             <div class="holiday-image-name heading">
                                 london
                                 <div class="sub-heading">
@@ -356,8 +377,8 @@
                     <div class="col-12 col-md-3 holiday-portion">
                         <div class="holiday-image-content">
 
-                            <img class="image-responsive  holiday-photo"
-                                src="./images/okimages/tour-hm-img-2.jpg" alt="japan">
+                            <img class="image-responsive  holiday-photo" src="./images/okimages/tour-hm-img-2.jpg"
+                                alt="japan">
                             <div class="holiday-image-name heading">
                                 japan
                                 <div class="sub-heading">
@@ -369,8 +390,8 @@
                     <div class="col-12 col-md-3 holiday-portion">
                         <div class="holiday-image-content">
 
-                            <img class="image-responsive  holiday-photo"
-                                src="./images/okimages/tour-hm-img-3.jpg" alt="paris">
+                            <img class="image-responsive  holiday-photo" src="./images/okimages/tour-hm-img-3.jpg"
+                                alt="paris">
                             <div class="heading holiday-image-name">
                                 paris
                                 <div class="sub-heading">
@@ -385,8 +406,8 @@
                         <div class="holiday-image-content">
 
 
-                            <img class="image-responsive holiday-photo"
-                                src="./images/okimages/tour-hm-img-4.jpg" alt="canada">
+                            <img class="image-responsive holiday-photo" src="./images/okimages/tour-hm-img-4.jpg"
+                                alt="canada">
                             <div class="holiday-image-name heading">
                                 canada
                                 <div class="sub-heading">
@@ -398,8 +419,8 @@
                     <div class="col-12 col-md-3 holiday-portion">
                         <div class="holiday-image-content">
 
-                            <img class="image-responsive  holiday-photo"
-                                src="./images/okimages/tour-hm-img-5.jpg" alt="usa">
+                            <img class="image-responsive  holiday-photo" src="./images/okimages/tour-hm-img-5.jpg"
+                                alt="usa">
                             <div class="holiday-image-name heading">
                                 usa
                                 <div class="sub-heading">
@@ -411,8 +432,8 @@
                     <div class="col-12 col-md-6 holiday-portion">
                         <div class="holiday-image-content">
 
-                            <img class="image-responsive  holiday-photo"
-                                src="./images/okimages/tour-hm-img-6.jpg" alt="china">
+                            <img class="image-responsive  holiday-photo" src="./images/okimages/tour-hm-img-6.jpg"
+                                alt="china">
                             <div class="holiday-image-name heading">
                                 china
                                 <div class="sub-heading">
@@ -1047,7 +1068,7 @@
                                             <p>
                                                 Need help?call toll free
                                                 <a href="tel:+" class="footer-help-link">
-                                                    <span class="">
+                                                    <span class="heading-internel">
                                                         0123 456 789
                                                     </span>
                                                 </a>
@@ -1061,7 +1082,7 @@
                                             <p>
                                                 Mail us for Any Query
                                                 <a href="mailto:" class="footer-help-link">
-                                                    <span>
+                                                    <span class="heading-internel">
                                                         support@domain.com
                                                     </span>
                                                 </a>
@@ -1077,7 +1098,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col-6 col-md-4">
+                                <div class="col-12 col-md-4">
                                     <div class="text-uppercase mb-0 footer-heading heading-internel">Recent trips
                                         <div class="footer-dash"></div>
                                     </div>
