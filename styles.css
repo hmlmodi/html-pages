@@ -71,9 +71,11 @@
     margin-left: 20px;
     margin-right: 40px;
 }
+
 /* .navbar-menu ul{ */
+
 /* } */
-    
+
 .nav-item button {
     float: right;
 }
@@ -263,10 +265,12 @@
     color: #ffffff;
     z-index: 1;
 }
-.top-banner-content{
+
+.top-banner-content {
     display: flex;
     justify-content: center;
 }
+
 .orange-color {
     color: #fc8d1f;
 }
@@ -327,38 +331,45 @@
 .package-images img {
     cursor: pointer;
     width: 100%;
-    object-fit: cover !important;
-    padding: 0px 0px;
-    margin: 15px;
-  }
-
-.package-images {
+    object-fit: contain;
+    /* margin: 15px; */
+}
+.packages-content{
     position: relative;
+}
+.package-images {
+    object-fit: contain;
+    margin: 10px 0px;
 }
 
 .packages-detail-name {
-    padding: 5px 0px;
     position: absolute;
-    bottom: 50px;
+    padding: 5px 0px;
+    bottom: 30px;
     float: left !important;
     height: max-content;
-    width: 70%;
+    width: 90%;
     font-size: 24px;
     object-fit: contain;
     background-color: #ff7f00;
     color: #f0f8ff;
 }
-.packages-sub-description{
+
+.packages-sub-description {
     background-color: #303030;
+    background-position: inherit;
+    width: 100%;
+    height: 30px;
     opacity: 0.7;
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     color: #f0f8ff;
     font-size: 12px;
     font-size-adjust: inherit;
-
-
+    float: left !important;
+    /* margin-left: 15px; */
 }
+
 .packages-bottom-button {
     display: contents;
 }
@@ -373,21 +384,22 @@
 @media(max-width:576px) {
     .packages-detail-name {
         font-size: 18px;
+        margin-left: 0px;
     }
     .packages-heading {
         margin-bottom: 0px;
     }
-    .package-images img {
-        margin: 10px 0px;
-    }
+    /* .package-images img { */
+        /* margin: 10px 0px; */
+    /* } */
     .packages-bottom-button button {
         margin-top: 40px;
         margin-bottom: 60px;
     }
-    .packages-sub-description{
-        font-size: 10px;
+    .packages-sub-description {
+        font-size: 9px;
+        margin-left: 0px;
     }
-
 }
 
 /* --------------------list banner section---------------- */
@@ -431,9 +443,11 @@
     font-weight: 500px;
 }
 
-.list-banner-container {
-    margin-top: 20px;
-}
+/* .list-banner-container { */
+
+/* margin-top: 20px; */
+
+/* } */
 
 .list-button div {
     box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.43);
@@ -449,6 +463,12 @@
 
 .list-written-content {
     margin: 26px;
+}
+
+.list-written-content p {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .list-icon {
@@ -469,10 +489,11 @@
 
 .list-banner-container .hover-btn:hover {
     background-color: #fc8d1f;
+    color: #f0f8ff;
 }
 
 .service-button {
-    margin-top: 13px;
+    margin-top: 30px;
     margin-bottom: 65px;
     width: 284px;
     background-color: #37cee9;
@@ -520,7 +541,7 @@
     width: 70px;
     object-fit: cover;
     margin-top: 30px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     margin-left: auto;
     margin-right: auto;
 }
@@ -551,12 +572,13 @@
     padding-right: 0px;
 }
 
-.holiday-section p {
-    margin-bottom: 47px;
-}
+/* .holiday-section p { */
+
+/* margin-bottom: 47px; */
+
+/* } */
 
 .holiday-image-content {
-    padding: 13px;
     width: 100%;
     height: 234px;
     cursor: pointer;
@@ -565,7 +587,7 @@
 
 .holiday-image {
     position: relative;
-    padding: 0px 0px 0px;
+    padding: 13px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -669,15 +691,27 @@
     display: flex;
     flex-direction: column;
 }
-
+.vl{
+    margin-top: 20px;
+    border-left: 3px solid #f0f8ff80;
+    height: 70px;
+    width: 4px;
+    padding: 0px;
+}
+/* 
 .readings-border-right {
-    border-right: 3px solid rgba(240, 248, 255, .5);
+    border-right: 3px solid #f0f8ff80;
     margin-bottom: 20px;
-    border-right: 2px solid transparent rgb(240, 248, 255);
+    height: 80%;
+    border-right: 2px solid transparent #f0f8ff;
+} */
+.form-readings .row{
+    display: flex;
+    justify-content: space-evenly;
 }
-.stats-right{
-    margin-left: 40px;
-}
+
+
+
 .form-readings div {
     font-weight: 500;
 }
@@ -702,7 +736,7 @@
 }
 
 .form input::-webkit-input-placeholder {
-    color: white;
+    color: #f0f8ff;
     font-weight: 700;
     font-size: 14px;
 }
@@ -710,13 +744,19 @@
 .form input {
     margin-top: 26px;
     margin-bottom: 49px;
-    color: white;
+    color: #f0f8ff;
     font-weight: 700;
     width: 100%;
     background: transparent;
     border: none;
-    border-bottom: 2px solid #f0f8ff;
+    box-sizing: unset;
+    border-bottom: 2px solid rgb(255, 255, 255, .3);
     display: grid;
+}
+
+.form input:focus {
+    border-bottom: 2px solid #f0f8ff;
+    outline: none;
 }
 
 #form-bottom-button {
@@ -789,7 +829,6 @@
     justify-content: center;
 }
 
-
 .news-section-heading {
     margin-top: 60px;
     font-size: 30px;
@@ -804,9 +843,8 @@
     display: grid;
 }
 
-
 .news-blog-content {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .blog-left-image {
@@ -826,6 +864,10 @@
     font-size: 12px;
 }
 
+.blog-author-photo-name span {
+    margin-left: 15px;
+}
+
 .blog-author {
     object-fit: cover;
     height: 30px;
@@ -841,7 +883,7 @@
     text-align: left;
     font-size: 20px;
     font-weight: 400;
-    margin-top:10px;
+    margin-top: 10px;
 }
 
 .blog {
@@ -1076,7 +1118,7 @@
 /* ------------------question section--------------- */
 
 .question-banner {
-    margin-top: 60px;
+    margin-top: 30px;
     background-color: #f4f7fb;
 }
 
@@ -1164,9 +1206,10 @@
     margin-top: 50px;
 }
 
-
 .contact-footer div p {
-    font-size: 12px;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 
 .social-icon img {
@@ -1174,8 +1217,9 @@
 }
 
 .footer-telephone {
-    margin-top: 20px;
+    margin: 20px 0px;
     display: flex;
+    align-items: center;
 }
 
 .icon-content-footer {
@@ -1208,18 +1252,11 @@
 
 .footer-mail {
     display: flex;
-}
-
-.footer-mail img {
-    margin: 10px;
-}
-
-.footer-telephone img {
-    margin: 10px;
+    align-items: center;
 }
 
 .footer-mail p {
-    margin: 10px;
+    margin-left: 10px;
     display: grid;
 }
 
@@ -1232,7 +1269,7 @@
 }
 
 .footer-telephone p {
-    margin: 10px;
+    margin-left: 10px;
     display: grid;
 }
 
