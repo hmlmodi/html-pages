@@ -41,6 +41,7 @@
     text-transform: uppercase;
     height: 57px;
     text-decoration: none;
+    display: block;
 }
 
 @media(max-width:576px) {
@@ -382,7 +383,10 @@ a {
 
 .top-banner-buttons a {
     width: 254px;
+    height: 59px;
     z-index: 1;
+    /* margin: 5px; */
+    display: block;
 }
 
 .button-left-top-banner {
@@ -418,7 +422,11 @@ a {
         width: 236px;
         height: 50px;
         float: none;
-        /* margin: 15px 0px; */
+        margin: 15px 0px;
+        padding: 15px;
+    }
+    .top-banner-buttons div {
+        display: contents;
     }
 }
 
@@ -1009,6 +1017,7 @@ a {
 
 .news-blog-content {
     margin-top: 20px;
+    padding: 0px 0px;
 }
 
 .blog-left-image {
@@ -1305,6 +1314,16 @@ a {
     }
 }
 
+/* news-letter */
+
+.news-letter-heading {
+    margin-top: 80px;
+    display: grid;
+}
+.news-letter-button{
+    background-color: #4adbff;
+
+}
 /* ------------------question section--------------- */
 
 .question-banner {
